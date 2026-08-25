@@ -19,62 +19,51 @@ The supplied Python files contain the numerical values used in the corresponding
 
 Running the scripts regenerates the visualizations from those stored values using NumPy and Matplotlib.
 
-This is useful for:
+This supports:
 
-- verifying plotted values;
-- recreating the manuscript-style figures;
-- inspecting the plotting logic;
-- modifying labels, dimensions, or export settings.
+- verification of the plotted values;
+- regeneration of Figures 2–5;
+- inspection of the plotting logic; and
+- modification of plotting or export settings.
 
-## What the Scripts Do Not Currently Reproduce
+## Scope Limitation
 
-Based on the supplied files, the repository does not currently contain the full upstream experimental pipeline that generated every plotted numerical value.
+The supplied files do not constitute a complete upstream experimental pipeline for generating every plotted numerical value from raw inputs.
 
-For example, the Figure 5 script contains the learning-curve values directly rather than training the reinforcement-learning models from scratch.
+For example, the learning-curve script contains the plotted learning-curve values directly rather than training the reinforcement-learning models from scratch.
 
-Therefore, unless additional experimental code and inputs are added, describe this repository as containing **figure-generation/reproduction code** rather than claiming complete computational reproducibility of all underlying experiments.
+Accordingly, this repository should be described as containing **figure-generation/reproduction code**, not as a complete computational reproduction of every underlying experiment.
 
 ## Dependencies
 
-The scripts import:
+The scripts use:
 
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
 ```
 
-Install them with:
+Install the dependencies with:
 
-```bash
+```powershell
 python -m pip install -r requirements.txt
 ```
 
-## Output Files and PDF Restriction
+## Generated Outputs
 
-Several scripts save both PNG and PDF outputs locally.
+The scripts save their generated figure outputs locally.
 
-The public repository is configured through `.gitignore` to ignore `*.pdf` files. This means locally generated PDF figures and restricted manuscript PDFs should not appear as Git changes in normal Git/GitHub Desktop workflows.
+The repository's `.gitignore` excludes the generated PNG filenames and all PDF files so that regenerated outputs are not accidentally committed through Git or GitHub Desktop.
 
-The PNG outputs can be included only if their public distribution is permitted.
+## Environment Recording
 
-## Reproducibility Versions
+For stronger long-term reproducibility, record the Python, NumPy, and Matplotlib versions used for the final publication release.
 
-For stronger long-term reproducibility, record the Python, NumPy, and Matplotlib versions actually used for the publication release.
-
-On Windows, after activating the environment used to generate the final figures, you can record the full environment with:
+From the environment actually used for the final figures, you can record the installed packages with:
 
 ```powershell
 python --version
 python -m pip freeze > requirements-lock.txt
 ```
 
-Only add `requirements-lock.txt` if it reflects the environment actually used for the final reproducible release; do not create an arbitrary lock file from an unrelated computer environment.
-
-## Publication Release
-
-When the code corresponding to the final article is stable:
-
-1. Commit the final verified repository state.
-2. Create a Git tag/release such as `v1.0.0`.
-3. Record the article DOI in the README and citation metadata once it exists.
-4. Optionally archive the public release in a research-software repository that issues a persistent DOI.
+Only add a lock file if it represents the environment actually used for the research release.

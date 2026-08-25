@@ -1,7 +1,6 @@
 # ============================================================
-# Project-specific publication safeguard
+# Restricted/publication files
 # ============================================================
-# PDFs must not be committed to the public repository.
 *.pdf
 *.PDF
 
@@ -12,10 +11,18 @@
 *.DOCX
 ~$*
 
-# Archives (avoid accidentally committing the original submission bundle)
+# Archives
 *.zip
 *.7z
 *.rar
+
+# ============================================================
+# Generated figure outputs from the supplied scripts
+# ============================================================
+figure2_RS_RR_tikz_match.png
+figure3_ablation_RS.png
+figure4_sensitivity_decay.png
+figure5_learning_curves.png
 
 # ============================================================
 # Python

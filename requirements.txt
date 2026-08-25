@@ -1,5 +1,3 @@
 # Python dependencies used by the supplied figure-generation scripts.
-# Once the exact manuscript environment is known, consider recording the
-# tested package versions in a separate reproducibility snapshot.
 numpy
 matplotlib
