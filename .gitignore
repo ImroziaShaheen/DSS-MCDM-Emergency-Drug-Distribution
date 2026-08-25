@@ -1,0 +1,66 @@
+# ============================================================
+# Project-specific publication safeguard
+# ============================================================
+# PDFs must not be committed to the public repository.
+*.pdf
+*.PDF
+
+# Microsoft Office / submission documents
+*.doc
+*.docx
+*.DOC
+*.DOCX
+~$*
+
+# Archives (avoid accidentally committing the original submission bundle)
+*.zip
+*.7z
+*.rar
+
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging/build output
+build/
+dist/
+*.egg-info/
+
+# ============================================================
+# Jupyter / Colab local artifacts
+# ============================================================
+.ipynb_checkpoints/
+
+# ============================================================
+# Windows
+# ============================================================
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ============================================================
+# Editors / temporary files
+# ============================================================
+.vscode/
+.idea/
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo

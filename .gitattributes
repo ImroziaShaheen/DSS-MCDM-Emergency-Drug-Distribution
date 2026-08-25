@@ -1,2 +1,14 @@
-# Auto detect text files and perform LF normalization
+# Normalize text files across Windows, macOS, and Linux.
 * text=auto
+
+# Keep source/documentation files with LF line endings in the repository.
+*.py  text eol=lf
+*.md  text eol=lf
+*.txt text eol=lf
+*.cff text eol=lf
+
+# Treat image files as binary.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
